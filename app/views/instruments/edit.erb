@@ -1,0 +1,16 @@
+<h1>Edit <%= @instrument.name %> </h1>
+
+<form action="/instruments/<%= @instrument.id %>" method="POST">
+  <input type="hidden" name="_method" value="PATCH">
+  <%= erb :"instruments/form" %>
+  <input type="submit" value="Edit <%= @instrument.name %>" />
+</form>
+
+<br/>
+
+<a href="/instruments/<%= @instrument.id %>">Back to <%= @instrument.name %>'s Show Page.</a>
+<br/>
+<form action="/instruments/<%= @instrument.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete <%= @instrument.name %>">
+</form>
